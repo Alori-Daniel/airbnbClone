@@ -1,6 +1,7 @@
 import Expo
 import React
 import ReactAppDependencyProvider
+import GoogleMaps
 
 @UIApplicationMain
 public class AppDelegate: ExpoAppDelegate {
@@ -16,6 +17,11 @@ public class AppDelegate: ExpoAppDelegate {
     let delegate = ReactNativeDelegate()
     let factory = ExpoReactNativeFactory(delegate: delegate)
     delegate.dependencyProvider = RCTAppDependencyProvider()
+
+         GMSServices.provideAPIKey("AIzaSyCPavmFD8rWh9Dlh4GrU7MUZ5bkvsh6-pA")
+
+ 
+
 
     reactNativeDelegate = delegate
     reactNativeFactory = factory

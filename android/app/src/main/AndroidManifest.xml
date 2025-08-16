@@ -27,5 +27,9 @@
         <data android:scheme="airbnbclone"/>
       </intent-filter>
     </activity>
+
+    <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="AIzaSyCPavmFD8rWh9Dlh4GrU7MUZ5bkvsh6-pA"/>
   </application>
 </manifest>
