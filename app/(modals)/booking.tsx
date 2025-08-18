@@ -20,6 +20,9 @@ import { Ionicons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
 import { places } from "@/assets/data/places";
 
+// @ts-ignore
+import DatePicker from "react-native-modern-datepicker";
+
 const guestsGropus = [
   {
     name: "Adults",
@@ -47,8 +50,12 @@ const booking = () => {
   const router = useRouter();
   const [openCard, setOpenCard] = useState(0);
   const [selectedPlace, setSelectedPlace] = useState(0);
+  const [selectedDate, setSelectedDate] = useState<string | undefined>();
+
   const AnimatedTouchableOpacity =
     Animated.createAnimatedComponent(TouchableOpacity);
+
+  const today = new Date().toISOString().substring(0, 10);
 
   const [groups, setGroups] = useState(guestsGropus);
 
@@ -140,17 +147,34 @@ const booking = () => {
 
         {openCard == 1 && (
           <Animated.View style={styles.cardBody}>
-            {/* <DatePicker
-              options={{
-                defaultFont: 'mon',
-                headerFont: 'mon-sb',
-                mainColor: Colors.primary,
-                borderColor: 'transparent',
-              }}
+            <DatePicker
+              isGregorian={true}
               current={today}
               selected={today}
-              mode={'calendar'}
-            /> */}
+              minimumDate={today}
+              maximumDate={""}
+              selectorStartingYear={0}
+              selectorEndingYear={3000}
+              disableDateChange={false}
+              mode={"Calendar"}
+              configs={{}}
+              reverse={"unset"}
+              minuteInterval={5}
+              options={{
+                defaultFont: "mon",
+                headerFont: "mon-sb",
+                borderColor: "transparent",
+                mainColor: Colors.primary,
+              }}
+              onSelectedChange={(date: string) => {
+                setSelectedDate(date);
+              }}
+              onDateChange={(date: string) => {
+                setSelectedDate(date);
+              }}
+              onTimeChange={() => {}}
+              onMonthYearChange={() => {}}
+            />
           </Animated.View>
         )}
       </View>
