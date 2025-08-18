@@ -14,7 +14,7 @@ interface Props {
 const INITIAL_REGION = {
   latitude: 52.49251658413422,
   longitude: 13.346443606561111,
-  latitudeDelta: 0.1, // smaller delta = closer zoom
+  latitudeDelta: 0.1,
   longitudeDelta: 0.1,
 };
 
