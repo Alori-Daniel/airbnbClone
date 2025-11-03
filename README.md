@@ -20,7 +20,6 @@ Native projects (ios/, android/) generated for device builds.
 Environment variables via .env (API keys, endpoints).
 
 Folders like app/, components/, hooks/, and interfaces/ exist in the repo, indicating an Expo Router/TypeScript architecture. 
-GitHub
 
 📱 Screens (high level)
 
@@ -34,20 +33,13 @@ Wishlists / Favorites
 
 Bookings / Trips
 
-(Adjust this list to match your current screens.)
-
 🧰 Tech Stack
 
 React Native with Expo
 
 TypeScript
 
-(Optional) Expo Router (implied by app/ folder)
-
-Native shells: iOS (Swift) and Android (Kotlin) for store-ready builds
-
-Repo language stats show TypeScript as the majority with some Swift and Kotlin present. 
-GitHub
+Expo Router
 
 🚀 Getting Started
 Prerequisites
